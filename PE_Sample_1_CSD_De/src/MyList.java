@@ -1,23 +1,24 @@
 /* This program contains 2 parts: (1) and (2)
    YOUR TASK IS TO COMPLETE THE PART  (2)  ONLY
  */
-//(1)===========================================
+//(1)==============================================================
 import java.io.*;
 import java.util.*;
 
-class MyList{
-    Node head, tail;  // tail -> null
+class MyList {
 
-    MyList(){
-        head=tail=null; // không trỏ đến bất kỳ phần tử nào
+    Node head, tail;
+
+    MyList() {
+        head = tail = null;
     }
 
-    boolean isEmpty(){
-        return(head==null);
+    boolean isEmpty() {
+        return (head == null);
     }
 
-    void clear(){
-        head=tail=null;
+    void clear() {
+        head = tail = null;
     }
 
     void fvisit(Node p, RandomAccessFile f) throws Exception {
@@ -55,10 +56,10 @@ class MyList{
         }
     }
 
-//==========================================================================
+//===========================================================================
 //(2)===YOU CAN EDIT OR EVEN ADD NEW FUNCTIONS IN THE FOLLOWING PART========
-//==========================================================================
-    void addLast(Person x){
+//===========================================================================
+    void addLast(Person x) {
         Node qNode = new Node(x);
         if (isEmpty()) {
             head = tail = qNode;
@@ -71,6 +72,7 @@ class MyList{
 
     void addFirst(Person x) {
         Node currentNode = new Node(x);
+
 //    	currentNode.next = head;
 //    	head = currentNode;
         head = new Node(x, head);
@@ -80,7 +82,7 @@ class MyList{
 
     }
 
-    void addLast(String xName, int xAge) {
+    void addLast(String xName, int xAge) {//You should write here appropriate statements to complete this function.
         if (xName.charAt(0) == 'B') {
             return;
         } else {
@@ -159,13 +161,14 @@ class MyList{
     }
 
 //=================================================================
-    void remove(Node q){
-        if(q==null){
+     void remove(Node q) {
+        if (q == null) {
             return;
         }
-        if(q==head){ // xoa node dau tien
+        if (q == head) { // xoa not dau tien
             removeFirst();
             return;
+
         }
         // tim node F truoc node q
         Node fNode = head;
@@ -183,7 +186,7 @@ class MyList{
         }
 
     }
-
+    
     void removeFirst() {
         if (isEmpty()) {
             return;
@@ -210,10 +213,10 @@ class MyList{
        Your task is to insert statements here, just after this comment,
        to complete the question in the exam paper.*/
         Node currentNode = head;
-        while (currentNode != null) {
+        while (currentNode.next != null) {
             if (currentNode.info.age < 6) {
                 remove(currentNode);
-                return;
+                break;
             }
             currentNode = currentNode.next;
         }
