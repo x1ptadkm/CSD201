@@ -1,4 +1,3 @@
-/*
 public class Node{
     Person info;
     Node next;
@@ -12,8 +11,9 @@ public class Node{
         this(x,null);
     }
  }
-*/
 
+
+/*
 public class Node{
     private Person info;
     private Node next;
@@ -34,4 +34,4 @@ public class Node{
         this.next=next;
     }
 }
-
+*/
