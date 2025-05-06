@@ -1,6 +1,6 @@
 public class Node{
-    Person info;
-    Node next;
+    Person info; // info (data item)
+    Node next;  // next 
     
     public Node(Person x, Node p){
         info=x;

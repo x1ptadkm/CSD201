@@ -1,15 +1,15 @@
 /* This program contains 2 parts: (1) and (2)
    YOUR TASK IS TO COMPLETE THE PART  (2)  ONLY
  */
-//(1)==============================================================
+//(1)===========================================
 import java.io.*;
 import java.util.*;
 
 class MyList{
-    Node head, tail;
+    Node head, tail;  // tail -> null
 
     MyList(){
-        head=tail= null; // không trỏ đến bất kỳ phần tử nào
+        head=tail=null; // không trỏ đến bất kỳ phần tử nào
     }
 
     boolean isEmpty() {
@@ -81,7 +81,7 @@ class MyList{
 
     }
 
-    void addLast(String xName, int xAge) {//You should write here appropriate statements to complete this function.
+    void addLast(String xName, int xAge) {
         if (xName.charAt(0) == 'B') {
             return;
         } else {
