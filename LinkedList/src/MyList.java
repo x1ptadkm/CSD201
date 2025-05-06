@@ -5,12 +5,11 @@
 import java.io.*;
 import java.util.*;
 
-class MyList {
-
+class MyList{
     Node head, tail;
 
-    MyList() {
-        head = tail = null;
+    MyList(){
+        head=tail= null; // không trỏ đến bất kỳ phần tử nào
     }
 
     boolean isEmpty() {
@@ -59,7 +58,7 @@ class MyList {
 //===========================================================================
 //(2)===YOU CAN EDIT OR EVEN ADD NEW FUNCTIONS IN THE FOLLOWING PART========
 //===========================================================================
-    void addLast(Person x) {
+    void addLast(Person x){
         Node qNode = new Node(x);
         if (isEmpty()) {
             head = tail = qNode;
